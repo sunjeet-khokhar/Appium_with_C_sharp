@@ -9,6 +9,7 @@ using System.Threading;
 using OpenQA.Selenium.Appium.Enums;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium.Appium.Service;
+using Trade_Me_Android.Utilities;
 
 namespace Trade_Me_Android
 {
@@ -20,26 +21,14 @@ namespace Trade_Me_Android
         [OneTimeSetUp]
         public void BeforeAll()
         {
-            //ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
+            string PlatformName = "Android";
+            string DeviceName = "Pixel_2_API_24";
+            string PlatformVersion = "7.0";
+            string AppPath = "D:\\apps\\nz.co.trademe.trademe.apk";
+            Uri Server = new Uri("http://localhost:4723/wd/hub");
 
-            //AppiumServiceBuilder appium_service_builder = new AppiumServiceBuilder()
-            // .UsingAnyFreePort();
-            //.WithAppiumJS(new System.IO.FileInfo("C:\\Windows\\System32\\node_modules\\appium\\lib\\appium.js"));
-
-            //AppiumLocalService appium_local_service = appium_service_builder.Build();
-            //if (!appium_local_service.IsRunning)
-            //  appium_local_service.Start();
-
-
-            Uri server = new Uri("http://localhost:4723/wd/hub");
-            
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.SetCapability(MobileCapabilityType.PlatformName, "Android");
-            capabilities.SetCapability(MobileCapabilityType.DeviceName, "Pixel_2_API_24");
-            capabilities.SetCapability(MobileCapabilityType.PlatformVersion, "7.0");
-            capabilities.SetCapability(MobileCapabilityType.App, "D:\\apps\\nz.co.trademe.trademe.apk");
-            //app = new AndroidDriver<AppiumWebElement>(appium_local_service, capabilities);
-            app = new AndroidDriver<AppiumWebElement>(server,capabilities);
+            Appium_Utilities driver = new Appium_Utilities();
+            app = driver.Initialize_Appium_Driver(PlatformName,DeviceName,PlatformVersion,AppPath,Server);
 
         }
 
