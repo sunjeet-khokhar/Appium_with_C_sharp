@@ -21,6 +21,7 @@ namespace Trade_Me_Android
         [OneTimeSetUp]
         public void BeforeAll()
         {
+            // add a comment for master branch
             string PlatformName = "Android";
             string DeviceName = "Pixel_2_API_24";
             string PlatformVersion = "7.0";
