@@ -27,3 +27,4 @@ D:\Code\Appium_with_C#\Appium_with_C_sharp\Trade_Me_Android\Trade_Me_Android\bin
 D:\Code\Appium_with_C#\Appium_with_C_sharp\Trade_Me_Android\Trade_Me_Android\bin\Debug\WebDriver.Support.xml
 D:\Code\Appium_with_C#\Appium_with_C_sharp\Trade_Me_Android\Trade_Me_Android\obj\Debug\Trade_Me_Android.dll
 D:\Code\Appium_with_C#\Appium_with_C_sharp\Trade_Me_Android\Trade_Me_Android\obj\Debug\Trade_Me_Android.pdb
+D:\Code\Appium_with_C#\Appium_with_C_sharp\Trade_Me_Android\Trade_Me_Android\obj\Debug\Trade_Me_Android.csprojResolveAssemblyReference.cache
